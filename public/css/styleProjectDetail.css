@@ -1,0 +1,160 @@
+/* Global */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+}
+
+a {
+	color: #007ACC;
+	text-decoration: none;
+}
+
+/* Header */
+header {
+	background-color: #007ACC;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.home-btn {
+	background-color: #fff;
+	color: #007ACC;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+	background-color: #007ACC;
+	color: #fff;
+}
+
+/* Main */
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 40px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-heading {
+	font-size: 32px;
+	margin-top: 0;
+}
+
+.filter-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.filter-container label {
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.filter-container select {
+	margin-right: 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.filter-container input[type="text"] {
+	font-size: 16px;
+	border-radius: 5px;
+	padding: 5px;
+	margin-right: 20px;
+	width: 200px;
+}
+
+.filter-container button {
+	background-color: #007ACC;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.filter-container button:hover {
+	background-color: #0065A5;
+}
+
+.create-issue-btn {
+	background-color: #007ACC;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.create-issue-btn:hover {
+	background-color: #0065A5;
+}
+
+.issue-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.issue {
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.issue h2 {
+	margin-top: 0;
+}
+
+.labels {
+	margin-bottom: 10px;
+}
+
+.label {
+	display: inline-block;
+	background-color: #ccc;
+	color: #333;
+	border-radius: 5px;
+	padding: 2px 5px;
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+.meta {
+	font-size: 14px;
+	color: #777;
+	margin-top: 10px;
+}
+
+.author {
+	margin-right: 10px;
+}
+
+.date {
+	margin-left: auto;
+}

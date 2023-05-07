@@ -1,0 +1,148 @@
+/* Global */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+a {
+	color: #007ACC;
+	text-decoration: none;
+}
+
+/* Header */
+header {
+	background-color: #007ACC;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.add-project-btn {
+	background-color: #fff;
+	color: #007ACC;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+}
+
+.add-project-btn:hover {
+	background-color: #007ACC;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* Main */
+main {
+	background-color: #F2F2F2;
+	padding: 20px;
+}
+
+.section-heading {
+	margin-top: 0;
+	font-size: 28px;
+	font-weight: bold;
+	color: #333;
+}
+
+.project-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.project-item {
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.project-info {
+	flex: 1;
+}
+
+.project-title {
+	margin-top: 0;
+	font-size: 24px;
+	font-weight: bold;
+	color: #007ACC;
+}
+
+.project-description {
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #555;
+}
+
+.project-status {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin-right: 10px;
+	text-transform: uppercase;
+}
+
+.open {
+	background-color: #64DD17;
+}
+
+.in-progress {
+	background-color: #FFD600;
+}
+
+.closed {
+	background-color: #D50000;
+}
+
+.project-actions {
+	display: flex;
+	align-items: center;
+}
+
+.edit-project-btn,
+.delete-project-btn {
+	background-color: #007ACC;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	margin-left: 10px;
+	text-decoration: none;
+}
+
+.edit-project-btn:hover,
+.delete-project-btn:hover {
+	background-color: #005E99;
+	cursor: pointer;
+}
+
+/* Footer */
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}

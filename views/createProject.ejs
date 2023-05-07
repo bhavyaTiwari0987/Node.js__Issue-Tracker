@@ -1,0 +1,35 @@
+<!-- views/projects/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New Project</title>
+	<link rel="stylesheet" href="/css/styleCreateProject.css">
+</head>
+<body>
+	<header>
+		<div class="logo">Issue Tracker</div>
+		<a href="/" class="home-btn">Home</a>
+	</header>
+	<main>
+		<h1 class="section-heading">Create New Project</h1>
+		<form action="/projects" method="POST">
+			<label for="name">Name:</label>
+			<input type="text" name="name" id="name" required>
+
+			<label for="description">Description:</label>
+			<textarea name="description" id="description" cols="30" rows="5" required></textarea>
+
+			<label for="author">Author:</label>
+			<input type="text" name="author" id="author" required>
+
+			<button type="submit" class="create-project-btn">Create Project</button>
+		</form>
+	</main>
+	<footer>
+		&copy; 2023 Issue Tracker. All rights reserved.
+	</footer>
+</body>
+</html>

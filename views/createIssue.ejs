@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Create Issue - Issue Tracker</title>
+	<link rel="stylesheet" href="/css/styleCreateIssue.css">
+</head>
+
+<body>
+	<header>
+		<a href="/" class="logo">Issue Tracker</a>
+		
+        <a href="#" class="home-btn">Back to Project</a>
+	</header>
+
+	<main>
+		<h1>Create Issue</h1>
+		
+        <form action="#" method="POST"></form>
+			<label for="title">Title:</label>
+			<input type="text" id="title" name="title" required>
+
+			<label for="description">Description:</label>
+			<textarea id="description" name="description" rows="5" required></textarea>
+
+			<label for="labels">Labels:</label>
+			<input type="text" id="labels" name="labels" placeholder="Enter labels separated by commas">
+
+			<label for="author">Author:</label>
+			<input type="text" id="author" name="author" required>
+
+			<button type="submit" class="create-issue-btn">Create Issue</button>
+		</form>
+	</main>
+</body>
+
+</html>
