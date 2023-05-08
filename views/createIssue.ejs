@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Create Issue - Issue Tracker</title>
-	<link rel="stylesheet" href="/css/styleCreateIssue.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Issue - Issue Tracker</title>
+    <link rel="stylesheet" href="/css/styleCreateIssue.css" />
+  </head>
 
-<body>
-	<header>
-		<a href="/" class="logo">Issue Tracker</a>
-        <a href="/projectDetail/<%- project.name%>" class="home-btn">Back to Project</a>
-	</header>
+  <body>
+    <header>
+      <a href="/" class="logo">Issue Tracker</a>
+      <a href="/projectDetail/<%- project.name%>" class="home-btn"
+        >Back to Project</a
+      >
+    </header>
 
-	<main>
-		<h1>Create Issue</h1>
-		
-        <form action="/api/v1/issue/createIssue/<%= project.name%>" method="POST">
-			<label for="issue">Title:</label>
-			<input type="text" id="issue" name="issue" required>
+    <main>
+      <h1>Create Issue</h1>
 
-			<label for="description">Description:</label>
-			<textarea id="description" name="description" rows="5" required></textarea>
+      <form action="/api/v1/issue/createIssue/<%= project.name%>" method="POST">
+        <label for="issue">Title:</label>
+        <input type="text" id="issue" name="issue" required />
 
-			<label for="labels">Labels:</label>
-			<input type="text" id="labels" name="labels" placeholder="Enter labels separated by commas">
+        <label for="description">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="5"
+          required
+        ></textarea>
 
-			<label for="author">Author:</label>
-			<input type="text" id="author" name="author" required>
+        <label for="select-values">Select Labels:</label>
+        <select name="labels" id="select-values" multiple>
+          <option value="UI">UI</option>
+          <option value="UX">UX</option>
+          <option value="Authentication">Authentication</option>
+          <option value="Network">Network</option>
+          <option value="Design">Design</option>
+        </select>
 
-			<button type="submit" class="create-issue-btn">Create Issue</button>
-		</form>
-	</main>
-</body>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required />
 
+        <button type="submit" class="create-issue-btn">Create Issue</button>
+      </form>
+    </main>
+  </body>
 </html>

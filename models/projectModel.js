@@ -17,9 +17,9 @@ const projectSchema = new mongoose.Schema({
   issues: [
     {
       type: mongoose.Schema.ObjectId,
-      ref: 'Issue'
-    }
-  ]
+      ref: "Issue",
+    },
+  ],
 });
 
 // CREATE MODEL

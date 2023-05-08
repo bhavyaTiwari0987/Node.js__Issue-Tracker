@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Issue Tracker</title>
-	<link rel="stylesheet" type="text/css" href="css/styleHome.css">
-</head>
-<body>
-	<header>
-		<div class="container">
-			<h1 class="logo">Issue Tracker</h1>
-			<a href="/createProject" class="add-project-btn">Add Project</a>
-		</div>
-	</header>
+  <head>
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" type="text/css" href="css/styleHome.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Issue Tracker</h1>
+        <a href="/createProject" class="add-project-btn">Add Project</a>
+      </div>
+    </header>
 
-	<main>
-		<div class="container">
-			<h2 class="section-heading">Your Projects</h2>
-			<ul class="project-list">
+    <main>
+      <div class="container">
+        <h2 class="section-heading">Your Projects</h2>
+        <ul class="project-list">
+          <% projects.forEach(function(project){ %>
+          <li class="project-item">
+            <div class="project-info">
+              <h3 class="project-title"><%= project.name%></h3>
+              <p class="project-description"><%= project.description %></p>
+              <div class="project-status open"><%= project.author%></div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="/projectDetail/<%= project.name%>"
+                class="edit-project-btn"
+                >Details</a
+              >
+              <a href="#" class="delete-project-btn">Delete</a>
+            </div>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+    </main>
 
-				<% projects.forEach(function(project){ %>
-				<li class="project-item">
-					<div class="project-info">
-						<h3 class="project-title"><%= project.name%></h3>
-						<p class="project-description"><%= project.description %></p>
-						<div class="project-status open"><%= project.author%></div>
-					</div>
-					<div class="project-actions">
-						<a href="/projectDetail/<%= project.name%>" class="edit-project-btn">Details</a>
-						<a href="#" class="delete-project-btn">Delete</a>
-					</div>
-				</li>
-				<% }); %>
-
-			</ul>
-		</div>
-	</main>
-
-	<footer>
-		<p>© 2023 Issue Tracker. All Rights Reserved.</p>
-	</footer>
-</body>
+    <footer>
+      <p>© 2023 Issue Tracker. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>

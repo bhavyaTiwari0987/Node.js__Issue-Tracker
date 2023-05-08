@@ -11,6 +11,7 @@ exports.getCreateProjectPage = (req, res, next)=>{
 }
 exports.getProjectDetailPage = async (req, res, next)=>{
     const project = await Project.findOne({name: req.params.name}).populate('issues');
+    // console.log(project);
     
     res.render('projectDetail' , {
         project

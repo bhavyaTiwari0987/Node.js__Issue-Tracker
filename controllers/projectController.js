@@ -1,5 +1,6 @@
 const Project = require("./../models/projectModel");
 
+// FOR CREATING NEW PROJECT
 exports.createProject = async (req, res, next) => {
   try {
     console.log(req.body);
@@ -12,6 +13,8 @@ exports.createProject = async (req, res, next) => {
     });
   }
 };
+
+// FOR GETTING ALL THE PROJECTS
 exports.getAllProjects = (req, res, next) => {
   res.status(200).json({
     status: "success",
@@ -19,7 +22,3 @@ exports.getAllProjects = (req, res, next) => {
   });
 };
 
-exports.demo= (req, res, next)=> {
-  console.log('in demo');
-  res.send('demo');
-}
