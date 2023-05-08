@@ -63,7 +63,7 @@ form label {
 	margin-bottom: 10px;
 }
 
-input[type="text"],
+input,
 textarea {
 	font-size: 16px;
 	border-radius: 5px;
@@ -84,4 +84,5 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
 	background-color: #0065A5;
+	cursor:pointer
 }

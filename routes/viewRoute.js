@@ -4,7 +4,7 @@ const viewController = require('./../controllers/viewController');
 
 router.get('/home' , viewController.getHomePage);
 router.get('/createProject' , viewController.getCreateProjectPage);
-router.get('/projectDetail' , viewController.getProjectDetailPage);
-router.get('/createIssue' , viewController.getCreateIssuePage);
+router.get('/projectDetail/:name' , viewController.getProjectDetailPage);
+router.get('/createIssue/:name' , viewController.getCreateIssuePage);
 
 module.exports = router;

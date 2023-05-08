@@ -11,11 +11,11 @@
 <body>
 	<header>
 		<div class="logo">Issue Tracker</div>
-		<a href="/" class="home-btn">Home</a>
+		<a href="/home" class="home-btn">Home</a>
 	</header>
 	<main>
 		<h1 class="section-heading">Create New Project</h1>
-		<form action="/projects" method="POST">
+		<form action="/api/v1/project/createProject" method="POST">
 			<label for="name">Name:</label>
 			<input type="text" name="name" id="name" required>
 

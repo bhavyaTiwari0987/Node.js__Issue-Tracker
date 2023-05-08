@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Create Issue - Issue Tracker</title>
 	<link rel="stylesheet" href="/css/styleCreateIssue.css">
 </head>
@@ -10,16 +10,15 @@
 <body>
 	<header>
 		<a href="/" class="logo">Issue Tracker</a>
-		
-        <a href="#" class="home-btn">Back to Project</a>
+        <a href="/projectDetail/<%- project.name%>" class="home-btn">Back to Project</a>
 	</header>
 
 	<main>
 		<h1>Create Issue</h1>
 		
-        <form action="#" method="POST"></form>
-			<label for="title">Title:</label>
-			<input type="text" id="title" name="title" required>
+        <form action="/api/v1/issue/createIssue/<%= project.name%>" method="POST">
+			<label for="issue">Title:</label>
+			<input type="text" id="issue" name="issue" required>
 
 			<label for="description">Description:</label>
 			<textarea id="description" name="description" rows="5" required></textarea>

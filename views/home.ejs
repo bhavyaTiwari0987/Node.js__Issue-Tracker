@@ -8,7 +8,7 @@
 	<header>
 		<div class="container">
 			<h1 class="logo">Issue Tracker</h1>
-			<a href="#" class="add-project-btn">Add Project</a>
+			<a href="/createProject" class="add-project-btn">Add Project</a>
 		</div>
 	</header>
 
@@ -16,39 +16,21 @@
 		<div class="container">
 			<h2 class="section-heading">Your Projects</h2>
 			<ul class="project-list">
+
+				<% projects.forEach(function(project){ %>
 				<li class="project-item">
 					<div class="project-info">
-						<h3 class="project-title">Project 1</h3>
-						<p class="project-description">This is the description of Project 1.</p>
-						<div class="project-status open">Open</div>
+						<h3 class="project-title"><%= project.name%></h3>
+						<p class="project-description"><%= project.description %></p>
+						<div class="project-status open"><%= project.author%></div>
 					</div>
 					<div class="project-actions">
-						<a href="#" class="edit-project-btn">Edit</a>
+						<a href="/projectDetail/<%= project.name%>" class="edit-project-btn">Details</a>
 						<a href="#" class="delete-project-btn">Delete</a>
 					</div>
 				</li>
-				<li class="project-item">
-					<div class="project-info">
-						<h3 class="project-title">Project 2</h3>
-						<p class="project-description">This is the description of Project 2.</p>
-						<div class="project-status in-progress">In Progress</div>
-					</div>
-					<div class="project-actions">
-						<a href="#" class="edit-project-btn">Edit</a>
-						<a href="#" class="delete-project-btn">Delete</a>
-					</div>
-				</li>
-				<li class="project-item">
-					<div class="project-info">
-						<h3 class="project-title">Project 3</h3>
-						<p class="project-description">This is the description of Project 3.</p>
-						<div class="project-status closed">Closed</div>
-					</div>
-					<div class="project-actions">
-						<a href="#" class="edit-project-btn">Edit</a>
-						<a href="#" class="delete-project-btn">Delete</a>
-					</div>
-				</li>
+				<% }); %>
+
 			</ul>
 		</div>
 	</main>

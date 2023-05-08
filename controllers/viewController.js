@@ -1,12 +1,25 @@
-exports.getHomePage = (req, res, next)=>{
-    res.render('home');
+const Project = require('./../models/projectModel');
+
+exports.getHomePage = async (req, res, next)=>{
+    const projects = await Project.find();
+    res.render('home' , {
+        projects
+    });
 }
 exports.getCreateProjectPage = (req, res, next)=>{
     res.render('createProject');
 }
-exports.getProjectDetailPage = (req, res, next)=>{
-    res.render('projectDetail');
+exports.getProjectDetailPage = async (req, res, next)=>{
+    const project = await Project.findOne({name: req.params.name}).populate('issues');
+    
+    res.render('projectDetail' , {
+        project
+    });
+    
 }
-exports.getCreateIssuePage = (req, res, next)=>{
-    res.render('createIssue');
+exports.getCreateIssuePage = async(req, res, next)=>{
+    const project = await Project.findOne({name: req.params.name})
+    res.render('createIssue' , {
+        project
+    });
 }
